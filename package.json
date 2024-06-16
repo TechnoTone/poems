@@ -2,7 +2,8 @@
   "name": "poems",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build"
   },
   "author": "Tony Hunt",
   "source": "index.html",
@@ -11,6 +12,6 @@
     "@parcel/transformer-less": "^2.9.3",
     "elm": "^0.19.1-5",
     "parcel": "^2.9.3",
-    "parcel-plugin-static-files-copy": "^2.6.0"
+    "parcel-reporter-static-files-copy": "^1.5.3"
   }
 }
