@@ -132,9 +132,6 @@ update msg model =
 stepUrl : Url.Url -> Model -> ( Model, Cmd Msg )
 stepUrl url model =
     let
-        _ =
-            Debug.log "stepUrl" (Debug.toString url)
-
         parser =
             oneOf
                 [ route top
@@ -172,4 +169,13 @@ poem_ =
 
 getPoem : String -> Maybe Poem
 getPoem poemToFind =
-    List.head (List.filter (\poem -> poem.title == poemToFind) Poems.list)
+    List.head
+        (List.filter
+            (matches poemToFind)
+            Poems.list
+        )
+
+
+matches : String -> Poem -> Bool
+matches title poem =
+    title == String.replace " " "%20" poem.title
