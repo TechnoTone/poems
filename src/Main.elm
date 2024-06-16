@@ -44,7 +44,7 @@ initModel flags url key =
     ( { key = key
       , page = Home
       }
-    , Cmd.none
+    , Navigation.pushUrl key (Url.toString url)
     )
 
 
@@ -90,7 +90,8 @@ poemView : Poem -> Html Msg
 poemView poem =
     div
         [ class "poem" ]
-        [ h1 [] [ text poem.title ]
+        [ a [ href "/" ] [ text "Back to list" ]
+        , h1 [] [ text poem.title ]
         , h4 [] [ text (Date.format "d MMMM y" poem.written) ]
         , article [ class "poem-text" ] [ text poem.text ]
         , footer []
