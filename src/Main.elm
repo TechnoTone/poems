@@ -4,7 +4,7 @@ import Browser exposing (Document)
 import Browser.Events as Browser
 import Browser.Navigation as Navigation
 import Date exposing (Date)
-import Html exposing (Html, a, article, button, div, footer, h1, h4, h5, header, span, text)
+import Html exposing (Html, a, article, button, div, footer, h1, h2, header, span, text)
 import Html.Attributes exposing (class, href)
 import Poems exposing (..)
 import Url
@@ -64,25 +64,25 @@ view model =
 
 homeView : Html Msg
 homeView =
+    let
+        entry : Poem -> Html Msg
+        entry poem =
+            a
+                [ href (poemUrl poem.title)
+                ]
+                [ div [ class "poem-entry" ]
+                    [ span [ class "poem-entry-title" ] [ text poem.title ]
+                    , span [ class "poem-entry-date" ] [ text (Date.format " (d MMMM y)" poem.written) ]
+                    ]
+                ]
+    in
     div
         []
         [ header []
             [ h1 [] [ text "Poems by Tony Hunt" ]
             ]
-        , div [ class "poems-list" ] (List.map homeViewPoemEntry Poems.list)
-        , footer []
-            [ h5 [] [ text "© 2024 Tony Hunt, all rights reserved" ] ]
-        ]
-
-
-homeViewPoemEntry : Poem -> Html Msg
-homeViewPoemEntry poem =
-    div
-        [ class "poem-entry" ]
-        [ a [ href (poemUrl poem.title) ]
-            [ span [ class "poem-entry-title" ] [ text poem.title ]
-            , span [ class "poem-entry-date" ] [ text (Date.format " (d MMMM y)" poem.written) ]
-            ]
+        , div [ class "poems-list" ] (List.map entry Poems.list)
+        , footerView
         ]
 
 
@@ -92,11 +92,16 @@ poemView poem =
         [ class "poem" ]
         [ a [ href "/" ] [ text "Back to list" ]
         , h1 [] [ text poem.title ]
-        , h4 [] [ text (Date.format "d MMMM y" poem.written) ]
+        , h2 [] [ text (Date.format "d MMMM y" poem.written) ]
         , article [ class "poem-text" ] [ text poem.text ]
-        , footer []
-            [ h5 [] [ text "© 2024 Tony Hunt, all rights reserved" ] ]
+        , footerView
         ]
+
+
+footerView : Html Msg
+footerView =
+    footer []
+        [ span [] [ text "© 2024 Tony Hunt, all rights reserved" ] ]
 
 
 poemUrl : String -> String

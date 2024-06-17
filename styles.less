@@ -1,6 +1,7 @@
 @cell-size: 3vh;
 @text-color: #222;
 @page-bg-color: #e0e0e0;
+@lowlight-bg-color: #d0d0d0;
 @highlight-bg-color: #c4c4c4;
 
 body {
@@ -9,9 +10,17 @@ body {
   color: @text-color;
 }
 
-.poem-entry:hover {
-  background-color: @highlight-bg-color;
-  cursor: pointer;
+.poem-entry {
+
+  margin: 0.3em;
+  padding: 0.3em;
+  background-color: @lowlight-bg-color;
+  ;
+
+  &:hover {
+    background-color: @highlight-bg-color;
+    cursor: pointer;
+  }
 }
 
 .poem-entry-title {
@@ -31,4 +40,13 @@ a {
 
 .poem-text {
   white-space: pre-wrap;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+footer {
+  font-weight: bold;
+  padding-top: 2em;
 }
