@@ -1,4 +1,4 @@
-module Main exposing (..)
+port module Main exposing (..)
 
 import Browser exposing (Document)
 import Browser.Events as Browser
@@ -72,7 +72,7 @@ homeView =
                 ]
                 [ div [ class "poem-entry" ]
                     [ span [ class "poem-entry-title" ] [ text poem.title ]
-                    , span [ class "poem-entry-date" ] [ text (Date.format " (d MMMM y)" poem.written) ]
+                    , span [ class "poem-entry-date" ] [ text (formatDate poem.written) ]
                     ]
                 ]
     in
@@ -84,6 +84,11 @@ homeView =
         , div [ class "poems-list" ] (List.map entry Poems.list)
         , footerView
         ]
+
+
+formatDate : Date -> String
+formatDate =
+    Date.format " (d MMMM y)"
 
 
 poemView : Poem -> Html Msg
@@ -141,12 +146,14 @@ stepUrl url model =
         parser =
             oneOf
                 [ route top
-                    ( { model | page = Home }, Cmd.none )
+                    ( { model | page = Home }, resetTitleAndDescription () )
                 , route poem_
                     (\poem ->
                         case getPoem poem of
                             Just match ->
-                                ( { model | page = Poem match }, Cmd.none )
+                                ( { model | page = Poem match }
+                                , Cmd.batch [ setTitle (match.title ++ formatDate match.written), setDescription "A poem by Tony Hunt" ]
+                                )
 
                             Nothing ->
                                 ( { model | page = Home }, Cmd.none )
@@ -185,3 +192,12 @@ getPoem poemToFind =
 matches : String -> Poem -> Bool
 matches title poem =
     title == String.replace " " "%20" poem.title
+
+
+port setTitle : String -> Cmd msg
+
+
+port setDescription : String -> Cmd msg
+
+
+port resetTitleAndDescription : () -> Cmd msg
