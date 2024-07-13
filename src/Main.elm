@@ -4,9 +4,10 @@ import Browser exposing (Document)
 import Browser.Events as Browser
 import Browser.Navigation as Navigation
 import Date exposing (Date)
-import Html exposing (Html, a, article, div, footer, h1, h2, header, span, text)
+import Html exposing (Html, a, article, footer, h1, h2, header, li, p, section, span, text, ul)
 import Html.Attributes exposing (class, href)
 import Poems exposing (..)
+import String exposing (uncons)
 import Url
 import Url.Parser as Parser exposing ((</>), Parser, custom, oneOf, top)
 
@@ -52,38 +53,34 @@ view : Model -> Document Msg
 view model =
     { title = "Poems by Tony Hunt"
     , body =
-        [ case model.page of
+        case model.page of
             Home ->
                 homeView
 
             Poem poem ->
                 poemView poem
-        ]
     }
 
 
-homeView : Html Msg
+homeView : List (Html Msg)
 homeView =
     let
         entry : Poem -> Html Msg
         entry poem =
-            a
-                [ href (poemUrl poem.title)
-                ]
-                [ div [ class "poem-entry" ]
+            li
+                [ class "poem-entry" ]
+                [ a
+                    [ href (poemUrl poem.title)
+                    ]
                     [ span [ class "poem-entry-title" ] [ text poem.title ]
                     , span [ class "poem-entry-date" ] [ text (formatDate poem.written) ]
                     ]
                 ]
     in
-    div
-        []
-        [ header []
-            [ h1 [] [ text "Poems by Tony Hunt" ]
-            ]
-        , div [ class "poems-list" ] (List.map entry Poems.list)
-        , footerView
-        ]
+    [ header [] [ h1 [] [ text "Poems by Tony Hunt" ] ]
+    , ul [ class "poems-list" ] (List.map entry Poems.list)
+    , footerView
+    ]
 
 
 formatDate : Date -> String
@@ -91,16 +88,42 @@ formatDate =
     Date.format " (d MMMM y)"
 
 
-poemView : Poem -> Html Msg
+poemView : Poem -> List (Html Msg)
 poemView poem =
-    div
-        [ class "poem" ]
+    [ header []
         [ a [ href "/" ] [ text "Back to list" ]
         , h1 [] [ text poem.title ]
         , h2 [] [ text (Date.format "d MMMM y" poem.written) ]
-        , article [ class "poem-text" ] [ text poem.text ]
-        , footerView
         ]
+    , article
+        [ class "poem" ]
+        (List.map stanzaView poem.stanzas)
+    , footerView
+    ]
+
+
+stanzaView : Stanza -> Html Msg
+stanzaView stanza =
+    section
+        [ class "stanza" ]
+        (List.map lineView stanza)
+
+
+lineView : String -> Html Msg
+lineView line =
+    let
+        ( firstLetter, restOfLine ) =
+            splitFirstLetter line
+    in
+    p [ class "line" ]
+        [ span [ class "first-letter" ] [ text (String.fromChar firstLetter) ]
+        , text restOfLine
+        ]
+
+
+splitFirstLetter : String -> ( Char, String )
+splitFirstLetter line =
+    uncons line |> Maybe.withDefault ( ' ', "" )
 
 
 footerView : Html Msg
