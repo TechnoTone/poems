@@ -4,11 +4,11 @@ import Browser exposing (Document)
 import Browser.Events as Browser
 import Browser.Navigation as Navigation
 import Date exposing (Date)
-import Html exposing (Html, a, article, button, div, footer, h1, h2, header, span, text)
+import Html exposing (Html, a, article, div, footer, h1, h2, header, span, text)
 import Html.Attributes exposing (class, href)
 import Poems exposing (..)
 import Url
-import Url.Parser as Parser exposing ((</>), Parser, custom, fragment, map, oneOf, s, top)
+import Url.Parser as Parser exposing ((</>), Parser, custom, oneOf, top)
 
 
 type alias Model =
@@ -40,7 +40,7 @@ main =
 
 
 initModel : flags -> Url.Url -> Navigation.Key -> ( Model, Cmd Msg )
-initModel flags url key =
+initModel _ url key =
     ( { key = key
       , page = Home
       }
@@ -116,15 +116,6 @@ poemUrl title =
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    let
-        noUpdate : ( Model, Cmd msg )
-        noUpdate =
-            ( model, Cmd.none )
-
-        updateModel : (Model -> Model) -> ( Model, Cmd msg )
-        updateModel fn =
-            ( fn model, Cmd.none )
-    in
     case msg of
         LinkClicked (Browser.Internal url) ->
             ( model
