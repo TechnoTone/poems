@@ -55,4 +55,19 @@ list =
         , [ "Today, I reminisce old times,", "my memories of the past.", "The things we did together,", "The occasions when we laughed." ]
         , [ "I don't miss your jokes or deeds", "or the things that you provided.", "I miss, simply, your presence,", "and the love that once resided." ]
         ]
+    , Poem
+        "Journey"
+        (fromCalendarDate 2024 Jul 23)
+        [ [ "Not so very many years ago", "I was unaware of what grew beneath", "the surface of my awareness.", "Depression was sinking in its teeth." ]
+        , [ "Struggling through each day,", "a blur of chronic pain,", "medication numbed my senses,", "as this condition altered my brain." ]
+        , [ "Eventually, the pain subsided,", "lessened by time and knowledge.", "The drugs were no longer necessary;", "without them, I could now manage." ]
+        , [ "I enjoyed this restoration,", "and a brightness returned within.", "Alas, I soon realised,", "it was dimmer than it once had been." ]
+        , [ "But it wasn't the passage of a decade", "that shadows my mind like a cloud.", "Something worse was suffocating,", "smothering me with its shroud." ]
+        , [ "First, it brought anxiety,", "gripping with a sickening dread.", "No escape and no explanation,", "it was coming from my own head." ]
+        , [ "With acceptance and familiarity", "I took away its power.", "It still simmers in the background", "Every minute, every hour." ]
+        , [ "But opening this inner dialogue,", "plunging depths I didn't know existed,", "I encountered a hidden monster", "a part of me, dark and twisted." ]
+        , [ "Surging to the surface,", "these thoughts I'd never had,", "feelings of utter despair,", "overwhelming and intolerably sad." ]
+        , [ "I'm glad I opened this fissure", "to this chasm hiding below.", "I'm glad I learned it was there", "before it swallowed me whole." ]
+        , [ "Striving and working to understand,", "to accept, to learn, to grow.", "I'm continuing on this journey", "and will see where next it may go." ]
+        ]
     ]
