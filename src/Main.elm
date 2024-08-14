@@ -69,7 +69,7 @@ homeView =
             li
                 [ class "poem-entry" ]
                 [ a
-                    [ href (poemUrl poem.title)
+                    [ href poem.urlPath
                     ]
                     [ span [ class "poem-entry-title" ] [ text poem.title ]
                     , span [ class "poem-entry-date" ] [ text (formatDate poem.written) ]
@@ -182,11 +182,6 @@ footerView =
         [ span [] [ text "© 2024 Tony Hunt, all rights reserved" ] ]
 
 
-poemUrl : String -> String
-poemUrl title =
-    title
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -211,9 +206,9 @@ stepUrl url model =
             oneOf
                 [ route top
                     ( { model | page = Home }, resetTitleAndDescription () )
-                , route poem_
-                    (\poem ->
-                        case getPoem poem of
+                , route poemRoute
+                    (\poemUrl ->
+                        case Poems.get poemUrl of
                             Just match ->
                                 ( { model | page = Poem match }
                                 , Cmd.batch [ setTitle (match.title ++ formatDate match.written), setDescription "A poem by Tony Hunt" ]
@@ -239,23 +234,9 @@ route parser handler =
     Parser.map handler parser
 
 
-poem_ : Parser (String -> a) a
-poem_ =
-    custom "POEM" Just
-
-
-getPoem : String -> Maybe Poem
-getPoem poemToFind =
-    List.head
-        (List.filter
-            (matches poemToFind)
-            Poems.list
-        )
-
-
-matches : String -> Poem -> Bool
-matches title poem =
-    title == String.replace " " "%20" poem.title
+poemRoute : Parser (String -> a) a
+poemRoute =
+    custom "POEM_URL" Just
 
 
 port setTitle : String -> Cmd msg

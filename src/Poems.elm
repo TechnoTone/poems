@@ -3,6 +3,7 @@ module Poems exposing (..)
 
 type alias Poem =
     { title : String
+    , urlPath : String
     , written : Date
     , stanzas : List Stanza
     }
@@ -16,10 +17,16 @@ type alias Stanza =
     List String
 
 
+get : String -> Maybe Poem
+get urlPath =
+    List.head <| List.filter (\p -> p.urlPath == urlPath) list
+
+
 list : List Poem
 list =
     [ Poem
         "Anchor"
+        "anchor"
         20240604
         [ [ "Adrift on the ocean, unable to steer,", "unable to navigate, no one else here." ]
         , [ "This feeling of being lost is wearing me down,", "constantly worried that one day I may drown." ]
@@ -34,6 +41,7 @@ list =
         ]
     , Poem
         "Motivational Words"
+        "motivational-words"
         20240611
         [ [ "Sitting in this room,", "looking at these cards,", "don't know what to write.", "Why is this so hard?" ]
         , [ "Motivational words", "and open questions.", "They don't really resonate", "or inspire, these suggestions." ]
@@ -41,6 +49,7 @@ list =
         ]
     , Poem
         "Thought Control"
+        "thought-control"
         20240613
         [ [ "Supposed to be working, but unable to focus.", "Thoughts so scattered, a chaotic locus.", "We're in control; you can't choke us!", "These thoughts seem to say, but I know that's bogus." ]
         , [ "Perhaps I should sit and meditate.", "It used to help, but not of late.", "So instead, I spiral, degenerate.", "The thoughts persist, perpetuate." ]
@@ -49,6 +58,7 @@ list =
         ]
     , Poem
         "Father's Day"
+        "fathers-day"
         20240616
         [ [ "The day that you died was, naturally,", "filled with sadness and grief.", "But among these emotions was another,", "an unexpected feeling of relief." ]
         , [ "In many ways, you were gone already,", "dementia slowly taking you away.", "But you weren't gone, you were suffering,", "until that fateful day." ]
@@ -58,6 +68,7 @@ list =
         ]
     , Poem
         "Journey"
+        "journey"
         20240723
         [ [ "Not so very many years ago", "I was unaware of what grew beneath", "the surface of my awareness.", "Depression was sinking in its teeth." ]
         , [ "Struggling through each day,", "a blur of chronic pain,", "medication numbed my senses,", "as this condition altered my brain." ]
