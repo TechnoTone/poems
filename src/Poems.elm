@@ -83,6 +83,18 @@ list =
         , [ "Striving and working to understand,", "to accept, to learn, to grow.", "I'm continuing on this journey", "and will see where next it may go." ]
         ]
     , Poem
+        "Dear Tony"
+        "dear-tony"
+        20240730
+        [ [ "Dear Tony, I'm writing this letter to you today,", "in the hopes that it helps you to find your way." ]
+        , [ "I can see that you're struggling with troubles and strife.", "Perhaps this will help you find some light in your life." ]
+        , [ "Dark times will happen, from time to time.", "It can be challenging, waiting for the sun to shine." ]
+        , [ "Try to remember that it's not going to last.", "Things always improve, like they have in the past." ]
+        , [ "These ebbs and flows, these swings of the pendulum,", "they're a cycle, a rhythm, and you know you can ride them." ]
+        , [ "You've done it before; you can do it again,", "and each time you do, it takes less and less strain." ]
+        , [ "So hang in there Tony, you're doing ok.", "You've got this, you're getting stronger, each and every day." ]
+        ]
+    , Poem
         "Seed"
         "seed"
         20240814
