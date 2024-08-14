@@ -82,4 +82,17 @@ list =
         , [ "I'm glad I opened this fissure", "to this chasm hiding below.", "I'm glad I learned it was there", "before it swallowed me whole." ]
         , [ "Striving and working to understand,", "to accept, to learn, to grow.", "I'm continuing on this journey", "and will see where next it may go." ]
         ]
+    , Poem
+        "Seed"
+        "seed"
+        20240814
+        [ [ "Today, I'm looking to see some light,", "at the end of the tunnel, that is my plight." ]
+        , [ "I hold back the darkness with a candle flame,", "a hobby or interest, a temporary refrain." ]
+        , [ "These candles don't last. The flames, they flutter.", "As one goes out, I light up another." ]
+        , [ "The candlelight is weak, and this darkness so vast.", "They are all I have, and I'm determined to last." ]
+        , [ "Inside me, I feel a light within.", "A seed of brightness that will never grow dim." ]
+        , [ "This fragile seed, too small to withstand,", "the darkness around me, too much to demand." ]
+        , [ "For now, these candles help me proceed,", "while I protect and nurture this beautiful seed." ]
+        , [ "I carry it with me in the hope that, one day,", "it will grow to finally drive the darkness away." ]
+        ]
     ]
