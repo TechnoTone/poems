@@ -3,7 +3,6 @@ port module Main exposing (..)
 import Browser exposing (Document)
 import Browser.Events as Browser
 import Browser.Navigation as Navigation
-import Date exposing (Date)
 import Html exposing (Html, a, article, footer, h1, h2, header, li, p, section, span, text, ul)
 import Html.Attributes exposing (class, href)
 import Poems exposing (..)
@@ -84,8 +83,59 @@ homeView =
 
 
 formatDate : Date -> String
-formatDate =
-    Date.format " (d MMMM y)"
+formatDate dmy =
+    let
+        year =
+            dmy // 10000
+
+        month =
+            (dmy // 100) |> modBy 100
+
+        monthName =
+            case month of
+                1 ->
+                    "January"
+
+                2 ->
+                    "February"
+
+                3 ->
+                    "March"
+
+                4 ->
+                    "April"
+
+                5 ->
+                    "May"
+
+                6 ->
+                    "June"
+
+                7 ->
+                    "July"
+
+                8 ->
+                    "August"
+
+                9 ->
+                    "September"
+
+                10 ->
+                    "October"
+
+                11 ->
+                    "November"
+
+                12 ->
+                    "December"
+
+                _ ->
+                    "Unknown"
+
+        day =
+            dmy |> modBy 100
+    in
+    String.fromInt day ++ " " ++ monthName ++ " " ++ String.fromInt year
 
 
 poemView : Poem -> List (Html Msg)
@@ -93,7 +143,7 @@ poemView poem =
     [ header []
         [ a [ href "/" ] [ text "Back to list" ]
         , h1 [] [ text poem.title ]
-        , h2 [] [ text (Date.format "d MMMM y" poem.written) ]
+        , h2 [] [ text (formatDate poem.written) ]
         ]
     , article
         [ class "poem" ]
