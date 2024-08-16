@@ -211,7 +211,7 @@ stepUrl url model =
                         case Poems.get poemUrl of
                             Just match ->
                                 ( { model | page = Poem match }
-                                , Cmd.batch [ setTitle (match.title ++ " " ++ formatDate match.written), setDescription "A poem by Tony Hunt" ]
+                                , Cmd.batch [ setTitle (match.title ++ " - " ++ formatDate match.written), setDescription "A poem by Tony Hunt" ]
                                 )
 
                             Nothing ->
