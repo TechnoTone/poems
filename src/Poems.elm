@@ -124,10 +124,11 @@ list =
     ]
 
 
-fromString : String -> List Stanza
-fromString =
-    String.trim
-        >> String.replace "\u{000D}\n" "\n"
-        >> String.split "\n\n"
-        >> List.map (String.lines >> List.map String.trim)
-        >> Debug.log "Stanzas"
+
+-- fromString : String -> List Stanza
+-- fromString =
+--     String.trim
+--         >> String.replace "\u{000D}\n" "\n"
+--         >> String.split "\n\n"
+--         >> List.map (String.lines >> List.map String.trim)
+--         >> Debug.log "Stanzas"
