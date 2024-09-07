@@ -1,4 +1,4 @@
-module Poems exposing (..)
+module Poems exposing (Date, Poem, Stanza, get, list)
 
 
 type alias Poem =
@@ -107,4 +107,27 @@ list =
         , [ "For now, these candles help me proceed,", "while I protect and nurture this beautiful seed." ]
         , [ "I carry it with me in the hope that, one day,", "it will grow to finally drive the darkness away." ]
         ]
+    , Poem
+        "Counting"
+        "counting"
+        20240907
+        [ [ "Counting the seconds", "where emotions reside;", "There, they can beckon,", "like a strong rip tide." ]
+        , [ "Counting the minutes", "where thoughts may dwell,", "some fleeting snippets,", "others, hard to quell." ]
+        , [ "Counting the hours", "where work gets done.", "Flourishing like flowers", "or wilting in the sun." ]
+        , [ "Counting the days,", "wary of inaction.", "Looking for ways", "to find satisfaction." ]
+        , [ "Counting the weeks", "as we rush around.", "Some pass in streaks,", "others run aground." ]
+        , [ "Counting the months,", "seeking fulfilment.", "Challenges confront,", "and we hold with commitment." ]
+        , [ "Counting the years,", "and the wisdom they bring,", "from blood, sweat and tears,", "and a refusal to give in." ]
+        , [ "Counting the decades,", "reminiscing lost youth.", "Memory fades;", "We can't fight the truth." ]
+        , [ "Counting my blessings,", "I'm still here today.", "Sometimes, with no bearings,", "but I'm still finding my way." ]
+        ]
     ]
+
+
+fromString : String -> List Stanza
+fromString =
+    String.trim
+        >> String.replace "\u{000D}\n" "\n"
+        >> String.split "\n\n"
+        >> List.map (String.lines >> List.map String.trim)
+        >> Debug.log "Stanzas"
