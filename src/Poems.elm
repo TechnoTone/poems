@@ -130,7 +130,7 @@ list =
         , [ "Red is the anger", "and frustration with myself,", "with this situation,", "with my poor mental health." ]
         , [ "Yellow is the compassion", "I try to find", "for myself as I struggle", "inside my mind." ]
         , [ "Green is the peace", "and tranquillity I feel", "on rare occasions,", "so full of appeal." ]
-        , [ "White is the strength,", "the life, the vitality,", "that I see in others,", "but in me, it lacks opacity." ]
+        , [ "White is the strength,", "the life, the vitality,", "that I see in others,", "but in me, lacks opacity." ]
         ]
     ]
 
