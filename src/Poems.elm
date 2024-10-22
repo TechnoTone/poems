@@ -122,6 +122,14 @@ list =
         , [ "Counting my blessings,", "I'm still here today.", "Sometimes, with no bearings,", "but I'm still finding my way." ]
         ]
     , Poem
+        "Calm"
+        "calm"
+        20241015
+        [ [ "The calm before the storm;", "a familiar feeling.", "Learning to recognise", "when my mood starts reeling." ]
+        , [ "The calm in the eye", "of the storm as it flails.", "Holding myself tall,", "resisting the gales." ]
+        , [ "The calm afterwards;", "a sense of relief.", "Time to rest and recover,", "however brief." ]
+        ]
+    , Poem
         "Colours"
         "colours"
         20241024
