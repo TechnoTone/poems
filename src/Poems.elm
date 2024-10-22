@@ -121,6 +121,17 @@ list =
         , [ "Counting the decades,", "reminiscing lost youth.", "Memory fades;", "We can't fight the truth." ]
         , [ "Counting my blessings,", "I'm still here today.", "Sometimes, with no bearings,", "but I'm still finding my way." ]
         ]
+    , Poem
+        "Colours"
+        "colours"
+        20241024
+        [ [ "Blue is the mood", "that I'm constantly hiding.", "Cover it with smiles", "and pretend that I'm thriving." ]
+        , [ "Black is the knot", "of anxiety in my core.", "Tearing me apart,", "always wanting more." ]
+        , [ "Red is the anger", "and frustration with myself,", "with this situation,", "with my poor mental health." ]
+        , [ "Yellow is the compassion", "I try to find", "for myself as I struggle", "inside my mind." ]
+        , [ "Green is the peace", "and tranquillity I feel", "on rare occasions,", "so full of appeal." ]
+        , [ "White is the strength,", "the life, the vitality,", "that I see in others,", "but in me, it lacks opacity." ]
+        ]
     ]
 
 
