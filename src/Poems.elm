@@ -140,6 +140,23 @@ list =
         , [ "Green is the peace", "and tranquillity I feel", "on rare occasions,", "so full of appeal." ]
         , [ "White is the strength,", "the life, the vitality,", "that I see in others,", "but in me, lacks opacity." ]
         ]
+    , Poem
+        "Sands of time"
+        "sands-of-time"
+        20241029
+        [ [ "The sands of time keep falling;", "a whirlpool in slow motion.", "The reservoir slowly empties;", "a steady and inevitable erosion." ]
+        , [ "Through the centre, they each fall;", "the grains become isolated.", "Their brief moment in the light,", "their glory illuminated." ]
+        , [ "Delicately, they tumble down,", "landing amongst each other.", "Layer upon layer of memories;", "a tapestry of light and colour." ]
+        ]
+    , Poem
+        "Contradictions"
+        "contradictions"
+        20241103
+        [ [ "Never really alone;", "friends and family all around.", "Never really alone,", "yet loneliness abounds." ]
+        , [ "The world is full of colour;", "beautiful sights to delight.", "The world is full of colour;", "only seen in black and white." ]
+        , [ "A symphony of sound;", "an orchestra of life in action.", "A symphony of sound;", "a constantly buzzing distraction." ]
+        , [ "The universe is full of energy,", "a wonder to behold.", "The universe is full of energy,", "but still, I feel so cold." ]
+        ]
     ]
 
 
