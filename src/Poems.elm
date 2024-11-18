@@ -157,6 +157,16 @@ list =
         , [ "A symphony of sound;", "an orchestra of life in action.", "A symphony of sound;", "a constantly buzzing distraction." ]
         , [ "The universe is full of energy,", "a wonder to behold.", "The universe is full of energy,", "but still, I feel so cold." ]
         ]
+    , Poem
+        "Pause"
+        "pause"
+        20231115
+        [ [ "Make time, take time, to pause, to breathe,"
+          , "a time to take stock, a short reprieve,"
+          , "a moment of awareness, immersed in the presence,"
+          , "to fully connect with peace and quiescence."
+          ]
+        ]
     ]
 
 
