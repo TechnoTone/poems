@@ -167,6 +167,15 @@ list =
           , "to fully connect with peace and quiescence."
           ]
         ]
+    , Poem
+        "Beginnings"
+        "beginnings"
+        20241210
+        [ [ "Beginning to see the light at the end of this tunnel.", "Stepping out of this darkness, away from this struggle." ]
+        , [ "Beginning to see the edge of this dark forest.", "A way out of these trees full of torment and menace." ]
+        , [ "Beginning to reach the end of this storm.", "Blue sky ahead, a gentle breeze so warm." ]
+        , [ "Any of these beginnings would be a welcome relief.", "But thinking about them only makes me frustrated and angry." ]
+        ]
     ]
 
 
