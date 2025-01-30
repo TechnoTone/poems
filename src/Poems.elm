@@ -160,7 +160,7 @@ list =
     , Poem
         "Pause"
         "pause"
-        20231115
+        20241115
         [ [ "Make time, take time, to pause, to breathe,"
           , "a time to take stock, a short reprieve,"
           , "a moment of awareness, immersed in the presence,"
@@ -179,10 +179,24 @@ list =
     , Poem
         "Fractured"
         "fractured"
-        20250130
+        20250129
         [ [ "Fractured, scattered,", "incoherent thoughts,", "a storm in my head." ]
         , [ "Physically numb,", "emotionless except,", "anxiety and dread." ]
         , [ "Apathetic, lethargic,", "living seems pointless,", "but afraid to be dead." ]
+        ]
+    , Poem
+        "Alone"
+        "alone"
+        20250130
+        [ [ "In the woods by myself, or at home, or with friends;"
+          , "always alone, in my thoughts, without end."
+          ]
+        , [ "Repeated attempts to engage with connections,"
+          , "feels like nothing more than feeble distractions."
+          ]
+        , [ "But alone with these thoughts, it's good to remind"
+          , "myself that this is just my state of mind."
+          ]
         ]
     ]
 

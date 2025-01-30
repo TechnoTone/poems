@@ -77,7 +77,7 @@ homeView =
                 ]
     in
     [ header [] [ h1 [] [ text "Poems by Tony Hunt" ] ]
-    , ul [ class "poems-list" ] (List.map entry Poems.list)
+    , ul [ class "poems-list" ] (List.map entry (Poems.list |> List.sortBy .written))
     , footerView
     ]
 
