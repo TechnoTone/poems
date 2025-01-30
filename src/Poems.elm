@@ -176,6 +176,14 @@ list =
         , [ "Beginning to reach the end of this storm.", "Blue sky ahead, a gentle breeze so warm." ]
         , [ "Any of these beginnings would be a welcome relief.", "But thinking about them only makes me frustrated and angry." ]
         ]
+    , Poem
+        "Fractured"
+        "fractured"
+        20250130
+        [ [ "Fractured, scattered,", "incoherent thoughts,", "a storm in my head." ]
+        , [ "Physically numb,", "emotionless except,", "anxiety and dread." ]
+        , [ "Apathetic, lethargic,", "living seems pointless,", "but afraid to be dead." ]
+        ]
     ]
 
 
