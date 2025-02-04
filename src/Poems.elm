@@ -194,7 +194,7 @@ list =
         , [ "Repeated attempts to engage with connections,"
           , "feels like nothing more than feeble distractions."
           ]
-        , [ "But alone with these thoughts, it's good to remind"
+        , [ "But alone with these thoughts, I try to remind"
           , "myself that this is just my state of mind."
           ]
         ]
