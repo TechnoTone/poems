@@ -179,7 +179,7 @@ splitFirstLetter line =
 footerView : Html Msg
 footerView =
     footer []
-        [ span [] [ text "© 2024 Tony Hunt, all rights reserved" ] ]
+        [ span [] [ text "© 2025 Tony Hunt, all rights reserved" ] ]
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
