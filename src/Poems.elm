@@ -198,6 +198,41 @@ list =
           , "myself that this is just my state of mind."
           ]
         ]
+    , Poem
+        "Existential Thoughts"
+        "existential-thoughts"
+        20250318
+        [ [ "Nihilistic thoughts keep plaguing my mind;"
+          , "constantly swirling, combined and aligned;"
+          , "wearing me down, this incessant grind."
+          , "I wish I could leave these thoughts behind."
+          ]
+        , [ "People around me, all living, all dying."
+          , "The universe doesn't care, so why are we trying"
+          , "to find a purpose, a sense of thriving?"
+          , "But to me, it's a fallacy, a delusion of lying."
+          ]
+        , [ "Why are we here? What is it all for?"
+          , "I can't see the point of anything any more."
+          , "A sense of futility deep in my core."
+          , "A battle in my mind, an eternal war."
+          ]
+        , [ "I look back at the path that brought me here,"
+          , "full of anger, anxiety, depression and fear."
+          , "But with self-realisation and understanding, it's clear;"
+          , "I'll keep striving and finding a way to persevere."
+          ]
+        , [ "The path in front of me is blocked by a door,"
+          , "this one more massive than the one before."
+          , "Through it, another revelation to explore."
+          , "Another facet to add to my personal lore."
+          ]
+        , [ "Uncharted territory remains a constant attraction;"
+          , "a desire to grow, a call to action."
+          , "Whatever I find, I must not abandon,"
+          , "so these existential thoughts are my new companion."
+          ]
+        ]
     ]
 
 
