@@ -201,7 +201,7 @@ list =
     , Poem
         "Existential Thoughts"
         "existential-thoughts"
-        20250318
+        20250316
         [ [ "Nihilistic thoughts keep plaguing my mind;"
           , "constantly swirling, combined and aligned;"
           , "wearing me down, this incessant grind."
@@ -231,6 +231,16 @@ list =
           , "a desire to grow, a call to action."
           , "Whatever I find, I must not abandon,"
           , "so these existential thoughts are my new companion."
+          ]
+        ]
+    , Poem
+        "Brighton Beach"
+        "brighton-beach"
+        20250319
+        [ [ "Waves slowly rolling in one by one,"
+          , "rippling scintillations sparkling in the sun."
+          , "Gently crashing with a whispering roar"
+          , "as excited pebbles dance along the shore."
           ]
         ]
     ]
