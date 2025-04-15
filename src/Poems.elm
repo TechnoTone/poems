@@ -243,6 +243,26 @@ list =
           , "as excited pebbles dance along the shore."
           ]
         ]
+    , Poem
+        "Abyss"
+        "abyss"
+        20250410
+        [ [ "So tired, so drained, floating over the abyss."
+          , "Feel nothing but pain that I can't dismiss."
+          , "Trying to change, but keep returning to this."
+          , "So tired, so drained, how can I resist?"
+          ]
+        , [ "So here, I float, suspended in the air."
+          , "Below me, the abyss, and into it I stare."
+          , "Nothing I can do, no way to prepare."
+          , "Yet still I feel nothing but dread and despair."
+          ]
+        , [ "Here I am, stuck, in suspended animation."
+          , "A repeating loop of observation and stagnation."
+          , "No anticipation, no destination, no celebration of transformation."
+          , "Just a voice, a narration of a futile situation."
+          ]
+        ]
     ]
 
 
