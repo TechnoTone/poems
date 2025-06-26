@@ -263,6 +263,39 @@ list =
           , "Just a voice, a narration of a futile situation."
           ]
         ]
+    , Poem
+        "Shifting Sands"
+        "shifting-sands"
+        20250626
+        [ [ "Waves at the beach, like events in our lives."
+          , "Some soft and gentle, others violent like knives."
+          , "Some may drench us in peace and serenity,"
+          , "while others tear at us with apparent enmity."
+          ]
+        , [ "Fair weather days, revelry so grand."
+          , "Children play in the waves and build with the sand."
+          , "Knowing their creations will get washed away,"
+          , "it matters not; they'll be made anew, on some other day."
+          ]
+        , [ "Fearful of storms, from a merciless sea,"
+          , "that pound at the sand and leave behind debris."
+          , "But just as the sand moves and persists,"
+          , "so too do we, as our lives turn and twist."
+          ]
+        , [ "The tide comes in, and we fear we may drown;"
+          , "Overwhelmed by the sea as it weighs us down."
+          , "But there's peace to be found when submerged below;"
+          , "a stillness, a serenity, if we can find the flow."
+          ]
+        , [ "The tide goes out and leaves us bare,"
+          , "exposing our souls to the open air."
+          , "These moments are a good time to reflect."
+          , "Bask in the sunlight while we introspect."
+          ]
+        , [ "One after another, these cycles continue."
+          , "So, embrace the changes, and find balance within you."
+          ]
+        ]
     ]
 
 
