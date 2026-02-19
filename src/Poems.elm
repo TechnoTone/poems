@@ -296,6 +296,31 @@ list =
           , "So, embrace the changes, and find balance within you."
           ]
         ]
+    , Poem
+        "Kintsugi"
+        "kintsugi"
+        20260114
+        [ [ "Pressure is slowly rising"
+          , "Cracks are starting to appear"
+          , "Stomach suddenly drops"
+          , "Overwhelming dread and fear."
+          ]
+        , [ "This is how it started"
+          , "Emotions buried inside"
+          , "Finally filled to bursting"
+          , "Nowhere left to hide."
+          ]
+        , [ "Gather up the pieces"
+          , "Clean them gentle as a feather"
+          , "See their enduring beauty"
+          , "and glue them back together."
+          ]
+        , [ "Fill the gaps with empathy"
+          , "Like gold mixed into the glue"
+          , "Experience becomes perspective"
+          , "Now wiser and better than new."
+          ]
+        ]
     ]
 
 
